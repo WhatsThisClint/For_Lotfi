@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optilivery - Smart Delivery Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-truck"></i>
+                    Optilivery
+                </div>
+                <div class="nav-links">
+                    <a href="#calculator" class="active">Calculator</a>
+                    <a href="#about">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Fleet</a>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Standardized, Secure and Transparent</h1>
+            <p>Our fares are as transparent as those of the bus. Pay only for the distance and stops you need, at no unnecessary extra cost. Whether you're a company that provides regular deliveries or a private individual who wants to send something from time to time, Optilivery makes it easy.</p>
+            <a href="#calculator" class="cta-button">Calculate Your Delivery</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Over Optilivery</h2>
+            <p>Founded by Infina, approached from a mathematical perspective and thorough knowledge and skills to meet a need of a postal company focused on transporting shipments that cannot be sent by regular mail, I present to you: Optilivery.</p>
+            <div class="about-features">
+                <div class="feature">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Mathematical Approach</h3>
+                    <p>Optimized routes and pricing based on advanced algorithms</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Transport</h3>
+                    <p>Safe and reliable delivery of your special shipments</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>Clear, distance-based pricing with no hidden costs</p>
+                </div>
+            </div>
+            <a href="#" class="learn-more">More about Optilivery</a>
+        </div>
+    </section>
+
+    <main id="calculator">
+        <div class="calculator-container">
+            <h2>Delivery Cost Calculator</h2>
+            <p class="calculator-intro">Get an instant quote for your delivery needs. Our transparent pricing means you'll only pay for what you need.</p>
+            
+            <form id="calculatorForm" class="calculator-form">
+                <div class="form-group">
+                    <label for="origin">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Pickup Location
+                    </label>
+                    <input type="text" id="origin" required placeholder="Enter pickup location">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">
+                        <i class="fas fa-flag-checkered"></i>
+                        Delivery Location
+                    </label>
+                    <input type="text" id="destination" required placeholder="Enter delivery location">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">
+                            <i class="fas fa-calendar"></i>
+                            Pickup Date
+                        </label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeSlot">
+                            <i class="fas fa-clock"></i>
+                            Time Slot
+                        </label>
+                        <select id="timeSlot" required>
+                            <option value="">Select time slot</option>
+                            <option value="09:00-17:00">Standard (09:00-17:00)</option>
+                            <option value="17:00-21:00">Express (17:00-21:00)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="transport-methods">
+                    <h3>Transport Method <span class="info-icon" data-tooltip="Choose the most suitable transport method for your cargo"><i class="fas fa-question-circle"></i></span></h3>
+                    <div class="method-options">
+                        <div class="method-card" data-method="handTruck">
+                            <i class="fas fa-dolly"></i>
+                            <span>Hand Truck</span>
+                            <small>For small packages</small>
+                        </div>
+                        <div class="method-card" data-method="rollCage">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Roll Cage</span>
+                            <small>For multiple items</small>
+                        </div>
+                        <div class="method-card" data-method="pallet">
+                            <i class="fas fa-pallet"></i>
+                            <span>Pallet</span>
+                            <small>For heavy cargo</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">
+                        <i class="fas fa-boxes"></i>
+                        Quantity
+                    </label>
+                    <input type="number" id="quantity" required min="1" value="1">
+                </div>
+
+                <div class="cost-display">
+                    <h3>Estimated Cost</h3>
+                    <div class="cost-amount">€0.00</div>
+                    <p class="cost-note">Transparent pricing - no hidden fees</p>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-button">
+                        <i class="fas fa-calculator"></i> Calculate Cost
+                    </button>
+                    <button type="button" class="secondary-button" id="addToCart" disabled>
+                        <i class="fas fa-shopping-cart"></i> Book Delivery
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-truck"></i>
+                Optilivery
+            </div>
+            <p>Mathematical precision meets delivery excellence</p>
+            <p class="copyright">&copy; 2024 Optilivery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
